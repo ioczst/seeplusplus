@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.csv": "csv",
+        ".htaccess": "apacheconf",
+        "Makefile": "c",
+        "sdl.h": "c"
+    },
+    "cmake.autoSelectActiveFolder": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.buildBeforeRun": false,
+    "cmake.clearOutputBeforeBuild": true,
+    "cmake.configureOnEdit": false,
+}

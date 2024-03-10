@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.csv": "csv",
+        ".htaccess": "apacheconf",
+        "Makefile": "c",
+        "xtree": "cpp",
+        "charconv": "cpp",
+        "format": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "xlocale": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "*.m": "cpp"
+    }
+}

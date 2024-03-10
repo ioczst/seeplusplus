@@ -1,0 +1,15 @@
+
+cmake_minimum_required(VERSION 3.14)
+
+project(test)
+
+set(SRC ${CMAKE_SOURCE_DIR}/src)
+set(3rdparty ${CMAKE_SOURCE_DIR}/3rdparty)
+
+link_directories(${3rdparty}/glfw/lib-vc2022)
+
+include_directories(${3rdparty}/glfw/include)
+add_executable(test ${SRC}/main.cpp )
+
+target_link_libraries(test glfw3 opengl32)
+

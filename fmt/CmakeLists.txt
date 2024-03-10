@@ -1,0 +1,13 @@
+#https://github.com/meemknight/cmakeSetup
+#Version 1.0.0
+
+cmake_minimum_required(VERSION 3.16)
+project(main)
+
+add_subdirectory(3rdparty/fmt-10.2.0)	
+
+add_executable("${CMAKE_PROJECT_NAME}" src/main.cpp)
+
+target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "3rdparty/fmt-10.2.0/include/")
+
+target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE fmt)

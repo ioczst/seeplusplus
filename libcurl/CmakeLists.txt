@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(main)
+
+add_subdirectory(3rdparty/curl)
+
+set(SOURCE_FILES src/main.cpp)
+
+add_executable("${CMAKE_PROJECT_NAME}" ${SOURCE_FILES})
+
+target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "3rdparty/curl/include")
+
+target_link_libraries("${CMAKE_PROJECT_NAME}" libcurl_shared)
+
+add_custom_command(TARGET "${CMAKE_PROJECT_NAME}" POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+            $<TARGET_FILE:libcurl_shared>
+            $<TARGET_FILE_DIR:${CMAKE_PROJECT_NAME}>)
+
+
